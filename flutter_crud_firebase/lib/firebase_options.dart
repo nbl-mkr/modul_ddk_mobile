@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-crud-firebase-1a754.firebasestorage.app',
     measurementId: 'G-3Q2Z476NW6',
   );
+
 }
