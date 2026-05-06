@@ -32,7 +32,6 @@ class LoginController extends GetxController {
 
   void increment() => count.value++;
 
-  // ↓ Taruh di sini
   Future<void> login() async {
     if (emailC.text.isNotEmpty && passC.text.isNotEmpty) {
       isLoading.value = true;
