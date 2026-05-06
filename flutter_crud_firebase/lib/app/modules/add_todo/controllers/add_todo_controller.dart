@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:uuid/uuid.dart';
-import '../../../routes/app_pages.dart';
 import '../../../widgets/custom_toast.dart';
 
 class AddTodoController extends GetxController {

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../../../utils/app_color.dart';
-import '../../../routes/app_pages.dart';
 import '../controllers/add_todo_controller.dart';
 import '../../../widgets/custom_input.dart';
 
