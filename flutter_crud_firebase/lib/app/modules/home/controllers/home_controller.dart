@@ -30,6 +30,21 @@ class HomeController extends GetxController {
 
   void increment() => count.value++;
 
+  Stream<DocumentSnapshot<Map<String, dynamic>>> streamUser() async* {
+    String uid = auth.currentUser!.uid;
+    yield* firestore.collection("users").doc(uid).snapshots();
+  }
+
+  Stream<QuerySnapshot<Map<String, dynamic>>> streamTodo() async* {
+    String uid = auth.currentUser!.uid;
+    yield* firestore
+        .collection("users")
+        .doc(uid)
+        .collection("todos")
+        .orderBy("created_at", descending: true)
+        .snapshots();
+  }
+
   Stream<QuerySnapshot<Map<String, dynamic>>> streamLastTodo() async* {
     String uid = auth.currentUser!.uid;
     yield* firestore

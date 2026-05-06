@@ -51,7 +51,6 @@ class AllTodoView extends GetView<AllTodoController> {
                     separatorBuilder: (context, index) => SizedBox(height: 16),
                     itemBuilder: (context, index) {
                       var todoData = data[index].data();
-
                       String desc;
                       return InkWell(
                         onTap: () => {
@@ -64,20 +63,16 @@ class AllTodoView extends GetView<AllTodoController> {
                             },
                           ),
                         },
-
                         borderRadius: BorderRadius.circular(8),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
-
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
                               width: 1,
-
                               color: AppColor.primaryExtraSoft,
                             ),
                           ),
-
                           padding: EdgeInsets.only(
                             left: 24,
                             top: 20,
@@ -89,7 +84,6 @@ class AllTodoView extends GetView<AllTodoController> {
                             children: [
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-
                                 children: [
                                   Text(
                                     (todoData["title"] == null)
