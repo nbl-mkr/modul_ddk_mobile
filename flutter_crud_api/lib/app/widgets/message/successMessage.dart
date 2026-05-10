@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bot_toast/bot_toast.dart';
-import 'package:flutter_crud_api/app/utils/api.dart';
 
 showSuccessMessage(String message) {
   BotToast.showCustomText(
