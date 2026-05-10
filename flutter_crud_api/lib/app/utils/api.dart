@@ -1,7 +1,10 @@
 import 'package:get_storage/get_storage.dart';
-import 'package:flutter_crud_api/app/widgets/message/errorMessage.dart';
-import 'package:flutter_crud_api/app/widgets/message/internetMessage.dart';
-import 'package:flutter_crud_api/app/widgets/message/successMessage.dart';
+import 'package:flutter_crud_api/app/widgets/message/errorMessage.dart'
+    as errorMsg;
+import 'package:flutter_crud_api/app/widgets/message/internetMessage.dart'
+    as internetMsg;
+import 'package:flutter_crud_api/app/widgets/message/successMessage.dart'
+    as successMsg;
 
 class SharedApi {
   String imageUrl = "http://posts.doyatama.com";
@@ -14,19 +17,19 @@ class SharedApi {
     return {"Authorization": "Bearer " + "BadToken"};
   }
 
-  showLoading() {
-    loadingMessage();
-  }
+  showLoading() {}
 
-  stopLoading() {
-    stopLoadingMessage();
-  }
+  stopLoading() {}
 
   showErrorMessage(String message) {
-    errorMessage(message);
+    errorMsg.showErrorMessage(message);
   }
 
   showInternetMessage(String message) {
-    internetMessage(message);
+    internetMsg.showInternetMessage(message);
+  }
+
+  showSuccessMessage(String message) {
+    successMsg.showSuccessMessage(message);
   }
 }
