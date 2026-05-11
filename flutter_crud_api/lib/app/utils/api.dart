@@ -2,7 +2,7 @@ import 'package:get_storage/get_storage.dart';
 
 class SharedApi {
   String imageUrl = "http://posts.doyatama.com";
-  String baseUrl = "https://flutter-api-.vercel.app/api/";
+  String baseUrl = "https://flutter-api-mu.vercel.app/api/";
 
   Map<String, String> getToken() {
     final box = GetStorage();

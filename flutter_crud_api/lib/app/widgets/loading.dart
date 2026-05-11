@@ -12,7 +12,6 @@ class LoadingWidget extends StatelessWidget {
       width: 180,
       height: 100,
       padding: EdgeInsets.all(0),
-      child: Image.asset('assets/gif/Loading.gif'),
     );
   }
 }
