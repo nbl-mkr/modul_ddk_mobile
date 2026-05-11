@@ -7,7 +7,7 @@ class NoData extends StatelessWidget {
     return Container(
       color: Colors.white,
       width: double.infinity,
-      height: double.infinity,
+      height: 300,
       alignment: Alignment.center,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,6 @@ class NoData extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 30),
         ],
       ),
     );
