@@ -41,7 +41,6 @@ showInternetMessage(String message) {
                   ),
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(6),
-                  child: Image.asset('assets/images/internet.png'),
                 ),
                 // Title
                 Container(
