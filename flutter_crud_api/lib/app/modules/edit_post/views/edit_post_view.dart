@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../controllers/add_post_controller.dart';
+import '../controllers/edit_post_controller.dart';
 import 'package:flutter_crud_api/app/utils/app_color.dart';
 import 'package:flutter_crud_api/app/widgets/custom_input.dart';
 
-class AddPostView extends GetView<AddPostController> {
-  const AddPostView({Key? key}) : super(key: key);
+class EditPostView extends GetView<EditPostController> {
+  const EditPostView({Key? key}) : super(key: key);
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Tambah Post',
+          'Edit Post',
           style: TextStyle(color: AppColor.secondary, fontSize: 14),
         ),
         leading: IconButton(
@@ -52,11 +53,11 @@ class AddPostView extends GetView<AddPostController> {
               () => ElevatedButton(
                 onPressed: () {
                   if (controller.isLoading.isFalse) {
-                    controller.addPost();
+                    controller.editPost();
                   }
                 },
                 child: Text(
-                  (controller.isLoading.isFalse) ? 'Tambah post' : 'Loading...',
+                  (controller.isLoading.isFalse) ? 'Edit Post' : 'Loading...',
                   style: TextStyle(fontSize: 16, fontFamily: 'poppins'),
                 ),
                 style: ElevatedButton.styleFrom(

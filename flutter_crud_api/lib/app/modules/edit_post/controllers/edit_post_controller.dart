@@ -4,10 +4,11 @@ import 'package:flutter_crud_api/app/data/post_model.dart';
 import 'package:flutter_crud_api/app/services/post_api.dart';
 import 'package:flutter_crud_api/app/routes/app_pages.dart';
 
-class AddPostController extends GetxController {
+class EditPostController extends GetxController {
   PostModel? postModel;
+  final Map<String, dynamic> argsData = Get.arguments;
   RxBool isLoading = false.obs;
-  RxBool isLoadingCreateTodo = false.obs;
+  RxBool isLoadingCreatePost = false.obs;
   TextEditingController titleC = TextEditingController();
   TextEditingController contentC = TextEditingController();
 
@@ -17,10 +18,20 @@ class AddPostController extends GetxController {
     contentC.dispose();
   }
 
-  Future addPost() async {
+  @override
+  void onInit() {
+    super.onInit();
+    titleC.text = argsData["title"];
+    contentC.text = argsData["content"];
+  }
+
+  Future<void> editPost() async {
     update();
-    postModel = await PostApi().addPostAPI(titleC.text, contentC.text);
-    isLoading.value = false;
+    postModel = await PostApi().editPostAPI(
+      titleC.text,
+      contentC.text,
+      argsData["id"],
+    );
     if (postModel!.status == 200) {
       update();
       Get.offAndToNamed(Routes.HOME);
